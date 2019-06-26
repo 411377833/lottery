@@ -105,7 +105,7 @@ export function fetchPatch(url,data = {}){
       })
   })
 }
- 
+
 /**
  * 封装put请求
  * @param url
