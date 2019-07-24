@@ -5,7 +5,7 @@
   "author": "金鑫",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --open",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
@@ -16,7 +16,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "es6-promise": "^4.2.8",
-    "mint-ui": "^2.2.13",
+    "vant": "^2.0.9",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.1.1"
