@@ -393,7 +393,7 @@ export default {
         display: -webkit-box;
         -webkit-line-clamp: 2;
         line-clamp: 2;
-        -webkit-box-orient: vertical
+        -webkit-box-orient: vertical;
     }
     .zhishi_time{
         display: flex;
