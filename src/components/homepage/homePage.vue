@@ -1,100 +1,202 @@
 <template>
-    <div class="wod" style="padding:5px">
+    <div class="wod">
         <!-- 头部搜索 -->
         <div class="header">
-            <div>
-                <img src="../../assets/img/下载.png" alt="" srcset="" class="door">
-            </div>
+            <img src="../../assets/img/下载.png" alt="" srcset="" class="door">
             <div>
                 <img src="../../assets/img/下载 (1).png" alt="" class="fixed">
                 全国
             </div>
             <van-search placeholder="搜索活动或主办方名称" v-model="value" />
-            <div>
-                <img src="../../assets/img/下载 (2).png" alt="" class="lcon">
-            </div>
+            <img src="../../assets/img/下载 (2).png" alt="" class="lcon">
         </div>
         <!-- 精确搜索 -->
-        <div class="search">
-            <van-tabs> 
-                <van-tabs v-model="activeName">
-                    <van-tab title="精选" name="a">
-                        <Table v-bind:abc='helloWord'/>
-                    </van-tab>
-                    <van-tab title="区块链" name="b">
-                        <Table />
-                    </van-tab>
-                    <van-tab title="IT互联网" name="c">
-                        <Table />
-                    </van-tab>
-                    <van-tab title="创业" name="d">
-                        <Table />
-                    </van-tab>
-                    <van-tab title="金融" name="e">
-                        <Table />
-                    </van-tab>
-                    <van-tab title="游戏" name="f">
-                        <Table />
-                    </van-tab>
-                    <van-tab title="文娱" name="g">
-                        <Table />
-                    </van-tab>
-                    <van-tab title="电商" name="h">
-                        <Table />
-                    </van-tab>
-                    <van-tab title="教育" name="i">
-                        <Table />
-                    </van-tab>
-                    <van-tab title="营销" name="j">
-                        <Table />
-                    </van-tab>
-                    <van-tab title="设计" name="k">
-                        <Table />
-                    </van-tab>
-                </van-tabs>
+        <div>
+            <van-tabs v-model="activeName">
+                <van-tab title="精选" name="a">
+                    <Table v-bind:abc='helloWord'/>
+                </van-tab>
+                <van-tab title="区块链" name="b">
+                    <Table />
+                </van-tab>
+                <van-tab title="IT互联网" name="c">
+                    <Table />
+                </van-tab>
+                <van-tab title="创业" name="d">
+                    <Table />
+                </van-tab>
+                <van-tab title="金融" name="e">
+                    <Table />
+                </van-tab>
+                <van-tab title="游戏" name="f">
+                    <Table />
+                </van-tab>
+                <van-tab title="文娱" name="g">
+                    <Table />
+                </van-tab>
+                <van-tab title="电商" name="h">
+                    <Table />
+                </van-tab>
+                <van-tab title="教育" name="i">
+                    <Table />
+                </van-tab>
+                <van-tab title="营销" name="j">
+                    <Table />
+                </van-tab>
+                <van-tab title="设计" name="k">
+                    <Table />
+                </van-tab>
             </van-tabs>
         </div>
         <!-- 强力推荐 -->
         <div class="recommend">
-            <div class="recommend-z">强力推荐</div>
-            <!-- 轮播图 -->
-            <div class="">
-
-            </div>
+            <div class="recommend_t">强力推荐</div>
+            <!-- 轮播图  :autoplay="3000"-->
+            <van-swipe :autoplay="3000" indicator-color="white">
+                <van-swipe-item>
+                    <div class="h_pic">
+                        <div>
+                            <img style="height:100px;width:100%;" src="../../assets/img/1.jpg" alt="">
+                            <div>华为云技术沙龙园区行——5G+云，赋能企业管理再升级</div>
+                            <div class="pic_time"><span>07/25 周四</span> <span>四川成都</span></div>
+                        </div>
+                        <div>
+                            <img style="height:100px;width:100%;" src="../../assets/img/1.jpg" alt="">
+                            <div>华为云技术沙龙园区行——5G+云，赋能企业管理再升级</div>
+                            <div class="pic_time"><span>07/25 周四</span> <span>四川成都</span></div>
+                        </div>
+                    </div>
+                    <div class="h_pic">
+                        <div>
+                            <img style="height:100px;width:100%;" src="../../assets/img/1.jpg" alt="">
+                            <div>华为云技术沙龙园区行——5G+云，赋能企业管理再升级</div>
+                            <div class="pic_time"><span>07/25 周四</span> <span>四川成都</span></div>
+                        </div>
+                        <div>
+                            <img style="height:100px;width:100%;" src="../../assets/img/1.jpg" alt="">
+                            <div>华为云技术沙龙园区行——5G+云，赋能企业管理再升级</div>
+                            <div class="pic_time"><span>07/25 周四</span> <span>四川成都</span></div>
+                        </div>
+                    </div>
+                </van-swipe-item>
+                <van-swipe-item>
+                    <div class="h_pic">
+                        <div>
+                            <img style="height:100px;width:100%;" src="../../assets/img/1.jpg" alt="">
+                            <div>华为云技术沙龙园区行——5G+云，赋能企业管理再升级</div>
+                            <div class="pic_time"><span>07/25 周四</span> <span>四川成都</span></div>
+                        </div>
+                        <div>
+                            <img style="height:100px;width:100%;" src="../../assets/img/1.jpg" alt="">
+                            <div>华为云技术沙龙园区行——5G+云，赋能企业管理再升级</div>
+                            <div class="pic_time"><span>07/25 周四</span> <span>四川成都</span></div>
+                        </div>
+                    </div>
+                    <div class="h_pic">
+                        <div>
+                            <img style="height:100px;width:100%;" src="../../assets/img/1.jpg" alt="">
+                            <div>华为云技术沙龙园区行——5G+云，赋能企业管理再升级</div>
+                            <div class="pic_time"><span>07/25 周四</span> <span>四川成都</span></div>
+                        </div>
+                        <div>
+                            <img style="height:100px;width:100%;" src="../../assets/img/1.jpg" alt="">
+                            <div>华为云技术沙龙园区行——5G+云，赋能企业管理再升级</div>
+                            <div class="pic_time"><span>07/25 周四</span> <span>四川成都</span></div>
+                        </div>
+                    </div>
+                </van-swipe-item>
+                <van-swipe-item>
+                    <div class="h_pic">
+                        <div>
+                            <img style="height:100px;width:100%;" src="../../assets/img/1.jpg" alt="">
+                            <div>华为云技术沙龙园区行——5G+云，赋能企业管理再升级</div>
+                            <div class="pic_time"><span>07/25 周四</span> <span>四川成都</span></div>
+                        </div>
+                        <div>
+                            <img style="height:100px;width:100%;" src="../../assets/img/1.jpg" alt="">
+                            <div>华为云技术沙龙园区行——5G+云，赋能企业管理再升级</div>
+                            <div class="pic_time"><span>07/25 周四</span> <span>四川成都</span></div>
+                        </div>
+                    </div>
+                    <div class="h_pic">
+                        <div>
+                            <img style="height:100px;width:100%;" src="../../assets/img/1.jpg" alt="">
+                            <div>华为云技术沙龙园区行——5G+云，赋能企业管理再升级</div>
+                            <div class="pic_time"><span>07/25 周四</span> <span>四川成都</span></div>
+                        </div>
+                        <div>
+                            <img style="height:100px;width:100%;" src="../../assets/img/1.jpg" alt="">
+                            <div>华为云技术沙龙园区行——5G+云，赋能企业管理再升级</div>
+                            <div class="pic_time"><span>07/25 周四</span> <span>四川成都</span></div>
+                        </div>
+                    </div>
+                </van-swipe-item>
+                <van-swipe-item>
+                    <div class="h_pic">
+                        <div>
+                            <img style="height:100px;width:100%;" src="../../assets/img/1.jpg" alt="">
+                            <div>华为云技术沙龙园区行——5G+云，赋能企业管理再升级</div>
+                            <div class="pic_time"><span>07/25 周四</span> <span>四川成都</span></div>
+                        </div>
+                        <div>
+                            <img style="height:100px;width:100%;" src="../../assets/img/1.jpg" alt="">
+                            <div>华为云技术沙龙园区行——5G+云，赋能企业管理再升级</div>
+                            <div class="pic_time"><span>07/25 周四</span> <span>四川成都</span></div>
+                        </div>
+                    </div>
+                    <div class="h_pic">
+                        <div>
+                            <img style="height:100px;width:100%;" src="../../assets/img/1.jpg" alt="">
+                            <div>华为云技术沙龙园区行——5G+云，赋能企业管理再升级</div>
+                            <div class="pic_time"><span>07/25 周四</span> <span>四川成都</span></div>
+                        </div>
+                        <div>
+                            <img style="height:100px;width:100%;" src="../../assets/img/1.jpg" alt="">
+                            <div>华为云技术沙龙园区行——5G+云，赋能企业管理再升级</div>
+                            <div class="pic_time"><span>07/25 周四</span> <span>四川成都</span></div>
+                        </div>
+                    </div>
+                </van-swipe-item>
+            </van-swipe>
         </div>
         <!-- 找活动 -->
         <div class="activity">
             <div class="activity1">
-                <span class="activity-z">
+                <span>
                     找活动
                 </span>
-                <span class="activity-x">
+                <span>
                     发布活动 >
                 </span>
             </div>
-            <div class="activity-c">
-                <ul>
-                    <li>筛选</li>
-                    <li>综合排序</li>
-                    <li>最新发布</li>
-                    <li>最多参与</li>
-                </ul>
-            </div>
         </div>
-        <div class="zhishi">
-            <div class="zhishi1">
-                <img src="../../assets/img/3.jpg" alt="">
-            </div>
-            <div class="zhishi2">
-                <div class="zhishi22">
-                    <span class="zhishi2-z">优选</span>
-                    与世界营销之父科特勒面对面：2019科特勒未来营销峰会
+        <van-tabs v-model="active1">
+            <van-tab title="筛选">
+                <div v-for="it in result">
+                    <div class="tab_ati">
+                        <img src="../../assets/img/3.jpg" alt="">
+                        <div style="display: flex;justify-content: space-between;flex-direction: column;padding:0.5rem;">
+                            <div class="zhishi22">
+                                <span class="zhishi2-z">优选</span>
+                                与世界营销之父科特勒面对面：2019科特勒未来营销峰会
+                            </div>
+                            <div class="zhishi2-z2">已认证</div>
+                            <div class="zhishi_time">
+                                <div>10/12 周六  朝阳</div>
+                                <div>1980-19800元</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="border-bottom: 5px solid #ccc;align-items: center;display: flex;justify-content: space-between;padding:0.5rem;">
+                        <div>#新经济 #行业大咖</div>
+                        <div><van-button size='small' plain type="primary">免费抢票</van-button></div>
+                    </div>
                 </div>
-                <div class="zhishi2-z2">已认证</div>
-                <div>10/12 周六  朝阳</div>
-                <div>1980-19800元</div>
-            </div>
-        </div>
+            </van-tab>
+            <van-tab title="综合排序">内容 2</van-tab>
+            <van-tab title="最新发布">内容 3</van-tab>
+            <van-tab title="最多参与">内容 4</van-tab>
+        </van-tabs>
     </div>
 </template>
 
@@ -107,7 +209,7 @@ export default {
   data () {
     return {
       name:'超级',
-      result: [],
+      result: ['','','','','',],
       helloWord:123456
     }
   },
@@ -125,16 +227,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.wod{
-    height: 2000px;
-}
+
     .header{
         display: flex;
         align-items: center;
+        padding: 0.5rem;
     }
     .header .door{
-        height: 28px;
-        width: 18px;
+        height: 1.5rem;
+        width: 1.2rem;
         padding-right: 12px;
     }
     .header .fixed{
@@ -151,7 +252,13 @@ export default {
     }
 
     .recommend{
-        flex-direction:column;
+        /* border:1px solid #ccc; */
+        text-align: left;
+        padding: 1rem;
+    }
+    .recommend_t{
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
     }
     .recommend .recommend-z{
         font-size: 20px;
@@ -166,7 +273,20 @@ export default {
         margin-top: 10px;
     }
     .activity .activity1{
-        margin-bottom: 14px;
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        align-items: center;
+    }
+    .activity .activity1 span:nth-child(1){
+        color: #000;
+        font-size: 1.2rem;
+        font-weight: 800;
+    }
+    .activity .activity1 span:nth-child(2){
+        color: #4aca53;
+        font-size: 0.8rem;
+        font-weight: 800;
     }
     .activity .activity-z{
         margin-right: 214px;
@@ -224,5 +344,59 @@ export default {
     .zhishi2 .zhishi2-z2{
         color: orangered;
         margin-top: 20px
+    }
+    .h_pic{
+        display: flex;
+        font-size: 0.8rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .h_pic>div{
+        width: 48%;
+    }
+    .pic_time{
+        padding: 1rem;
+        display: flex;
+        color: #ccc;
+        justify-content: space-between;
+    }
+    .tab_ati{
+        padding: 0.5rem;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 0.5rem;
+        display: flex;
+        margin-top: 1rem;
+    }
+    .tab_ati>img{
+        width: 40%;
+        height: 8rem;
+    }
+    .tab_ati>div{
+        flex: 1;
+        font-size: .8rem;
+    }
+    .zhishi2-z{
+        background-color: #ff3c00;
+        border-radius: .04rem;
+        /* font-size: .26rem; */
+        color: #fff;
+        padding: .02rem .04rem;
+        margin-right: .08rem；
+    }
+    .zhishi2-z2{
+        text-align: left;
+    }
+    .zhishi22{
+        text-overflow: -o-ellipsis-lastline;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical
+    }
+    .zhishi_time{
+        display: flex;
+        justify-content: space-between;
     }
 </style>
