@@ -12,18 +12,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'homePage',
+      component: HomePage
     },
     {
       path: '/kaijiang',
       name: 'kaijiang',
       component: kaijiang
     },
-    {
-      path: '/homePage',
-      name: 'homePage',
-      component: HomePage
-    }
+    // {
+    //   path: '/homePage',
+    //   name: 'homePage',
+    //   component: HomePage
+    // }
   ]
 })

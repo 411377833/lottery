@@ -1,25 +1,32 @@
 <template>
     <van-swipe :autoplay="3000" indicator-color="white">
-        <van-swipe-item><img style="height:200px" src="../../../static/images/609.jpg" alt=""></van-swipe-item>
-        <van-swipe-item><img style="height:200px" src="../../../static/images/609.jpg" alt=""></van-swipe-item>
-        <van-swipe-item><img style="height:200px" src="../../../static/images/609.jpg" alt=""></van-swipe-item>
         <van-swipe-item>
-            <div style="display:flex">
+            <img style="height:200px" src="../../assets/img/1.jpg" alt="">
+            </van-swipe-item>
+        <van-swipe-item>
+            <img style="height:200px" src="../../assets/img/2.jpg" alt="">
+            </van-swipe-item>
+        <van-swipe-item>
+            <img style="height:200px" src="../../assets/img/1.jpg" alt="">
+            </van-swipe-item>
+        <van-swipe-item>
+            <img style="height:200px" src="../../assets/img/2.jpg" alt="">
+            <!-- <div style="display:flex">
+                <div style="flex:1">
+                    <img style="height:100px;width:100%" src="../../../static/images/609.jpg" alt="">
+                </div> -->
+                <!-- <div style="flex:1">
+                    <img style="height:100px;width:100%" src="../../../static/images/609.jpg" alt="">
+                </div> -->
+            <!-- </div> -->
+            <!-- <div style="display:flex">
                 <div style="flex:1">
                     <img style="height:100px;width:100%" src="../../../static/images/609.jpg" alt="">
                 </div>
                 <div style="flex:1">
                     <img style="height:100px;width:100%" src="../../../static/images/609.jpg" alt="">
                 </div>
-            </div>
-            <div style="display:flex">
-                <div style="flex:1">
-                    <img style="height:100px;width:100%" src="../../../static/images/609.jpg" alt="">
-                </div>
-                <div style="flex:1">
-                    <img style="height:100px;width:100%" src="../../../static/images/609.jpg" alt="">
-                </div>
-            </div>
+            </div> -->
         </van-swipe-item>
     </van-swipe>
 </template>
