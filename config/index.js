@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://apis.juhe.cn/',//设置调用的接口域名和端口号（默认端口号80）
+        target: 'http://v.juhe.cn/',//设置调用的接口域名和端口号（默认端口号80）
         changeOrigin: true,
         pathRewrite: {'^/api': '' }
         //这里理解成用‘/api’代替target里面的地址，

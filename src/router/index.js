@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import kaijiang from '@/components/kaijiang'
 import HomePage from '@/components/homePage/homePage'
+import Headline from '@/components/headline'
 
 
 
@@ -12,18 +13,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'homePage',
-      component: HomePage
+      name: 'headline',
+      component: Headline
     },
     {
       path: '/kaijiang',
       name: 'kaijiang',
       component: kaijiang
     },
-    // {
-    //   path: '/homePage',
-    //   name: 'homePage',
-    //   component: HomePage
-    // }
+    {
+      path: '/homePage',
+      name: 'homePage',
+      component: HomePage
+    }
   ]
 })

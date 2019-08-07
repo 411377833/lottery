@@ -1,23 +1,15 @@
     <template>
     <div id="z1">
-      <!-- 头部 -->
-      <mt-header title="本期详情">
-        <router-link to="/" slot="left">
-          <mt-button type="default" icon="back">返回</mt-button>
-          <!-- <mt-button @click="handleClose">关闭</mt-button> -->
-        </router-link>
-        <mt-button icon="more" slot="right"></mt-button>
-      </mt-header>
     <!-- 内容 -->
-    <div class="content" v-for="it in result">
+    <div class="content" v-for="it in result" v-on:click="handClick(it.type)">
         <div class="content1">
-            <span class="shijian">2019073</span><span>2019-06-25(星期二)</span>
           <div class="content2">
-            <span style="font-size:20px;color:#000;margin-right:10px">{{it.lottery_name}}</span><span>{{it.remarks}}</span>
+            <span style="font-size:20px;color:#000;margin-right:10px">{{it.name}}</span><span>{{it.remarks}}</span>
           </div>
         </div>
     </div> 
-    </div>
+    
+    </div> 
   
 
   <!-- <mt-button>default </mt-button> -->
@@ -27,31 +19,63 @@
 // import store from '@/store/index'
 // import { Button } from 'mint-ui'
 export default {
-  name: 'kaijiang',
+  name: 'headline',
   data () {
     return {
       name:'超级',
-      result: []
+      result: [
+        {
+          name:'头条',
+          type:'top'
+        },
+        {
+          name:'社会',
+          type:'shehui'
+        },
+        {
+          name:'国内',
+          type:'guonei'
+        },
+        {
+          name:'国际',
+          type:'guoji'
+        },
+        {
+          name:'娱乐',
+          type:'yule'
+        },
+        {
+          name:'体育',
+          type:'tiyu'
+        },
+        {
+          name:'军事',
+          type:'junshi'
+        },
+        {
+          name:'科技',
+          type:'keji'
+        },
+        {
+          name:'财经',
+          type:'caijing'
+        },
+        {
+          name:'时尚',
+          type:'shishang'
+        },
+      ]
     }
   },
   beforeCreate(){
-    this.fetchGet('/api/lottery/query?key=ec3baf88cff239ef45a62332f4340a74&lottery_id='+this.$route.query.lottery_id).then(res=>{
-        console.log(res)
-        this.result = res.data.result
-    })
+    // this.fetchGet('/api/lottery/types?key=ec3baf88cff239ef45a62332f4340a74').then(res=>{
+    //     this.result = res.data.result
+    //   })
   },
   methods:{
-    onClicked(){
-      // console.log(this)
-      // this.fetchGet('/api/lottery/types?key=ec3baf88cff239ef45a62332f4340a74').then(res=>{
-      //   console.log(res)
-      // })
-      // this.$data.changableNum = this.$store.state.changableNum
-      
-    },
     handClick(id){
-      console.log(id)
-      this.fetchGet('/api/lottery/query?key=ec3baf88cff239ef45a62332f4340a74&lottery_id='+id).then(res=>{
+      // this.$router.push({ path:'/kaijiang',query: {lottery_id:id,abc:id}})
+      this.fetchGet('/api/toutiao/index?key=ec3baf88cff239ef45a62332f4340a74&type='+id).then(res=>{
         console.log(res)
       })
     }
@@ -89,16 +113,14 @@ export default {
   }
 
   .content{
+    margin: 10px;
     padding: 10px;
-    /* border-bottom: 1px solid #ccc; */
-    background-color: #254635;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px #888888;
   }
 
-  .content .content1 .shijian{
-      margin: 41px;
-  }
-
-  /* .content .content1 span {
+  .content .content1 span {
     margin: 0;
     padding: 0;
     font-size: 13px;
@@ -110,8 +132,9 @@ export default {
     color: #ccc;
   }
 
-  .content .content1 .content2 {
-    float: left;
+  .content .content1 .content2{
+    display: flex;
+    /* float: left; */
   }
 
   .content .content1 .content3{
@@ -120,12 +143,13 @@ export default {
   }
 
   .content .content4 {
-    margin: 5px 0 5px 0;
+    margin: 20px 0 5px 0;
     display: flex;
   }
 
   .content .content4 ul li {
-    float: left;
+    display: flex;
+    display: inline;
     margin: 7px 5px 7px 0;
     border: 1px s #000;
     border-radius: 25px;
@@ -140,10 +164,10 @@ export default {
 
   .content .content4 ul li:nth-child(7){
     background-color: #9900ff;
-  } */
+  }
 
   /*  */
-  /* .content .content5 {
+  .content .content5 {
     margin-bottom: 5px;
     display: flex;
   }
@@ -154,6 +178,7 @@ export default {
     border: 1px #000;
     border-radius: 25px;
     padding: 0 8px 8px 0;
+    /* background-color: #ff9966; */
     color: #ff9966;
     font-weight: 700px;
     font-size: 20px;
@@ -165,5 +190,15 @@ export default {
   
   .content .content5 ul li:nth-child(7){
     color: #9900ff;
-  } */
+  }
+
+  .content .hezi {
+    display: flex;
+    margin: 20px -10px 10px;
+  }
+
+  .content .hezi ul li {
+    background-color: #ccc;
+    padding: 5px 10px;
+  }
 </style>
